@@ -1,0 +1,127 @@
+
+.bagimage{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://bstatic.com/xdata/images/xphoto/1182x887/155157368.jpg?k=60a32293403fec4c76d05d4a518daa405c9276677ac2eab4b5a795fcfddc8128&o=?size=S');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: .9;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maindiv{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* .btn{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 10px;
+} */
+.room{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    transition: all.5s;
+}
+.rooms{
+    margin-top: 50px;
+}
+.gallery{
+    display: flex;
+}
+.gallery.room{
+    flex: 1;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.room:hover{
+    transform: scale(1.02) rotate(12deg);
+}
+.image{
+    width: 100%;
+    height: 300px;
+}
+.image:hover{
+   transform: scale(1.02) rotate(12deg);
+}
+.aboutimg{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+.btn2{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.image1{
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+}
+.card{
+    border: 1px solid ash;
+    width: 250px;   
+}
+.imgroom{
+    border-radius: 10px;
+    transition: 2s;
+}
+.imgroom:hover{
+    scale: 1.05;
+}
+.video{
+    width: 100%;
+    height: 100px;
+}
+
+
+/* ------------------------------------- */
+/* Admin home */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.wallpapers13.com/wp-content/uploads/2016/05/Nature-landscape-beautiful-mountain-flowers-and-purple-colored-rocks-green-grass-sun-rays-Desktop-Wallpaper-HD-1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    opacity: .7;
+}
+.text{
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+.btnroom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: magenta;
+    font-size: 20px;
+    font-weight: bold;
+}

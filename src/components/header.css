@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 60px;
+}
+.button{
+    float: right;
+    padding: 6px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
+/* imageCard */
+
+.card{
+    height: 330px;
+}
