@@ -32,10 +32,12 @@ function AdminBookings() {
     <>
     <h1 className='text-danger mt-5 text-center'><Link to={'/adminhome'}><i class="fa-solid fa-arrow-left text-dark"></i></Link> USER BOOKINGS</h1>
     <input className='form control' value={searchKey} onChange={(e)=>setSearchkey(e.target.value)} type="text" placeholder='Search' style={{width:'500px',marginLeft:'430px'}} /> <i class="fa-solid fa-magnifying-glass fa-2x mt-2 ms-3"></i>
-    {allbookings?.length>0?
-    allbookings.map((item)=>(<AdminCard booking={item}/>))
-    :
-    <h1 className='text-info text-center'>No Bookings</h1>}
+    <div className='row'>
+      {allbookings?.length>0?
+      allbookings.map((item)=>(<div className='col-md-4'><AdminCard booking={item}/></div>))
+      :
+      <h1 className='text-info text-center'>No Bookings</h1>}
+    </div>
     </>
   )
 }

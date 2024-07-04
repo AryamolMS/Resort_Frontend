@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { userbookingdetailsContext } from '../context/Contextshare';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Payment from './Payment';
 
 function Bookings() {
 
@@ -92,16 +93,12 @@ function Bookings() {
     if (token) {
       const result = await bookingsApi({roomId:selectedRooms,username:details.username,email:details.email,phoneno:details.phoneno,fromdate:checkInDate,todate:checkOutDate,totaldays:numOfDays,roomtype:selectedRooms.Type,roomnos:quantity.quantity,Amount:selectedRooms.Amount,totalamount:grandtotal}, reqHeader)
       console.log(result);
-      Swal.fire({
-      icon: "success",
-      /* title: "Oops...", */
-      text: "Booking Successfull!",
-      });
+      
       setBookingdetails(result.data)
-      navigate('/viwebokings')
 
     }
   }
+
 
   useEffect(() => {
     getRooms()
@@ -154,7 +151,7 @@ function Bookings() {
                 <Col md={6}>
 
                   <div className='mt-4'>
-                    <button className='btn btn-success' type="button" onClick={calculateNumOfDays}>
+                    <button className='btn btn-primay' type="button" onClick={calculateNumOfDays}>
                       Calculate Number of Days
                     </button>
                     <p className='mt-3'>Number of days between check-in and check-out: <h3>{numOfDays}</h3></p>
@@ -181,8 +178,11 @@ function Bookings() {
                     {selectedRooms && <button style={{ width: '300px', fontSize: '20px', fontWeight: 'bold', backgroundColor: 'white' }} className='btn mt-2 mb-1'>{selectedRooms.Amount * quantity.quantity * numOfDays}</button>}
                   </div>
                 </Col>
-                <button onClick={handleBookings} className='btn btn-success'  type="submit">Pay Now</button>
-              </Row>
+{/*                 <button onClick={handleBookings} className='btn btn-success'  type="submit">Book Room</button>
+
+ */}              
+    <Payment grand={grandtotal} onClick={handleBookings}/>
+ </Row>
             </form>
           </div>
         </Row>

@@ -130,9 +130,9 @@ function Authentication({register}) {
                 </div> 
                 :null}
 
-                <input type="email" name="" id="" placeholder='Email' className='input text-center w-75 ' value={userData.email} onChange={(e)=>setUserData({...userData,email:e.target.value})}/>  <br /> <br />
+                <input type="email" name="" id="" placeholder='admin@gmail.com' className='input text-center w-75 ' value={userData.email} onChange={(e)=>setUserData({...userData,email:e.target.value})}/>  <br /> <br />
 
-              <input type="password" name="" id="" placeholder='Password' className='input text-center w-75 ' value={userData.password} onChange={(e)=>setUserData({...userData,password:e.target.value})}/> <br /> <br />
+              <input type="password" name="" id="" placeholder='Admin123' className='input text-center w-75 ' value={userData.password} onChange={(e)=>setUserData({...userData,password:e.target.value})}/> <br /> <br />
 
               {registerForm ?
               <input type="submit" value="Register" className='submit1 text-center w-75 ' onClick={handleRegister}/>

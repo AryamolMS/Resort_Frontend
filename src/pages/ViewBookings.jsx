@@ -32,12 +32,25 @@ function ViewBookings() {
   return (
     <>
     <h1 className='text-center text-danger  mt-4'><Link to={'/homelogin'}><i class="fa-solid fa-arrow-left text-dark"></i></Link> USER BOOKINGS</h1>
-     {userbooking?.length>0?
-     userbooking.map((item)=>(<BookingCard data={item}/>))
-    :
-    <img src="https://img.freepik.com/free-vector/happy-tourists-choosing-hotel-booking-room-online-flat-illustration_74855-10811.jpg" alt="no image" style={{marginLeft:'340px'}} />
-      
-  }
+    <div className="container">
+        <div className="row">
+          {userbooking?.length > 0 ? (
+            userbooking.map((item) => (
+              <div key={item.id} className="col-md-6 mb-4">
+                <BookingCard data={item} />
+              </div>
+            ))
+          ) : (
+            <div className="col-12 text-center">
+              <img
+                src="https://img.freepik.com/free-vector/happy-tourists-choosing-hotel-booking-room-online-flat-illustration_74855-10811.jpg"
+                alt="no image"
+                className="img-fluid"
+              />
+            </div>
+          )}
+        </div>
+      </div>
     </>
   )
 }
